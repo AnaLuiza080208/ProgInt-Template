@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Lugx Gaming - Valorant</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-lugx-gaming.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+</head>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Atualiza o contador de itens no header
+    const updateCartCount = () => {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const count = cart.reduce((acc, item) => acc + item.qty, 0);
+      document.getElementById('cart-count').innerText = count;
+    };
+
+    updateCartCount();
+
+    const addToCartBtn = document.getElementById('add-to-cart');
+    if (addToCartBtn) {
+      addToCartBtn.addEventListener('click', function () {
+        const qtyInput = document.querySelector('#qty input');
+        const quantity = parseInt(qtyInput.value);
+
+        if (!isNaN(quantity) && quantity > 0) {
+          let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+          
+          cart.push({
+            game: 'Valorant',
+            price: 219.90,
+            qty: quantity
+          });
+  
+          localStorage.setItem('cart', JSON.stringify(cart));
+          updateCartCount();
+          alert('Produto adicionado ao carrinho!');
+        } else {
+          alert('Quantidade inválida!');
+        }
+      });
+    }
+  });
+</script>
+
+<body>
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" alt="" style="width: 158px;">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                      <li><a href="index.html">Início</a></li>
+                      <li><a href="shop.html">Nossa Loja</a></li>
+                      <li><a href="detalhes.html">Sobre nós</a></li>
+                      <li><a href="contact.html">Contato</a></li>
+                      <li><a href="login.html">Entrar</a></li>
+                      <li>
+                        <a href="carrinho.html">
+                          <i class="fa fa-shopping-cart"></i> Carrinho
+                          <span id="cart-count" style="background:red; color:white; padding:2px 6px; border-radius:10px; font-size:12px;">0</span>
+                        </a>
+                      </li>
+                    </ul>  
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="page-heading header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3>Valorant</h3>
+          <span class="breadcrumb"><a href="index.html">Início</a>  >  <a href="shop.html">Loja</a>  >  Valorant</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="single-product section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="left-image">
+            <img src="assets/images/trending-03.jpg" alt="Valorant">
+          </div>
+        </div>
+        <div class="col-lg-6 align-self-center">
+          <h4>Valorant</h4>
+          <span class="price"><em>Grátis</em></span>
+          <span class="offer">Pacote de Skins R$89,90</span>
+          <p>FPS tático 5v5 onde cada agente possui habilidades únicas. Combate estratégico e precisão são essenciais.</p>
+          <form id="qty" action="#">
+            <input type="number" class="form-control" value="1" min="1">
+            <button type="button" id="add-to-cart"><i class="fa fa-shopping-bag"></i> ADICIONAR AO CARRINHO</button>
+          </form>
+          <ul>
+            <li><span>Game ID:</span> VALORANT</li>
+            <li><span>Gênero:</span> <a href="#">FPS Tático</a>, <a href="#">Competitivo</a>, <a href="#">Estratégia</a></li>
+            <li><span>Tags:</span> <a href="#">5v5</a>, <a href="#">Habilidades</a>, <a href="#">Precisão</a></li>
+            <li><span>Plataformas:</span> PC</li>
+            <li><span>Classificação:</span> 16+</li>
+          </ul>
+        </div>
+        <div class="col-lg-12">
+          <div class="sep"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="more-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="tabs-content">
+            <div class="row">
+              <div class="nav-wrapper ">
+                <ul class="nav nav-tabs" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab" aria-controls="description" aria-selected="true">Descrição</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews" aria-selected="false">Reviews (4.9/5)</button>
+                  </li>
+                </ul>
+              </div>              
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+                  <p>Valorant é um jogo de tiro tático em primeira pessoa desenvolvido pela Riot Games. Mistura elementos de jogos como Counter-Strike com habilidades especiais de personagens, criando uma experiência única de FPS competitivo.</p>
+                  <br>
+                  <p>Principais características:
+                    <ul>
+                      <li>Diversos Agentes com habilidades únicas</li>
+                      <li>Modo competitivo ranqueado</li>
+                      <li>Arsenal variado de armas com skins personalizáveis</li>
+                      <li>Mapas estratégicos com múltiplos pontos de bomba</li>
+                      <li>Sistema de economia entre rodadas</li>
+                      <li>Atualizações frequentes com novos conteúdos</li>
+                    </ul>
+                  </p>
+                </div>
+                <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                  <p>"Valorant conseguiu inovar no gênero FPS tático com seu sistema de agentes e habilidades, mantendo a essência competitiva que fãs do gênero amam." - IGN</p>
+                  <br>
+                  <p>"O equilíbrio perfeito entre estratégia, trabalho em equipe e habilidade mecânica, tornando-se rapidamente um dos melhores FPS competitivos do mercado." - PC Gamer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section categories related-games">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="section-heading">
+            <h6>Jogos Relacionados</h6>
+            <h2>Você Pode Gostar</h2>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="main-button">
+            <a href="shop.html">Ver Todos</a>
+          </div>
+        </div>
+        <div class="col-lg col-sm-6 col-xs-12">
+          <div class="item">
+            <h4>Counter-Strike 2</h4>
+            <div class="thumb">
+              <a href="product-cs2.html"><img src="assets/images/cs2.jpg" alt="Counter-Strike 2"></a>
+            </div>
+            <span class="price">Grátis</span>
+          </div>
+        </div>
+        <div class="col-lg col-sm-6 col-xs-12">
+          <div class="item">
+            <h4>Overwatch 2</h4>
+            <div class="thumb">
+              <a href="product-overwatch.html"><img src="assets/images/overwatch.jpg" alt="Overwatch 2"></a>
+            </div>
+            <span class="price">Grátis</span>
+          </div>
+        </div>
+        <div class="col-lg col-sm-6 col-xs-12">
+          <div class="item">
+            <h4>Rainbow Six Siege</h4>
+            <div class="thumb">
+              <a href="product-siege.html"><img src="assets/images/siege.jpg" alt="Rainbow Six Siege"></a>
+            </div>
+            <span class="price">R$79,90</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="col-lg-12">
+        <p>Copyright © 2023 LUGX Gaming Company. Todos os direitos reservados. 
+           &nbsp;|&nbsp; 
+           Adaptado por <strong>Ana Luiza</strong>
+           &nbsp;|&nbsp;
+           <a rel="nofollow" href="https://templatemo.com" target="_blank">Design Base: TemplateMo</a>
+        </p>
+      </div>
+    </div>
+</footer>
+
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/custom.js"></script>
+</body>
+</html>
