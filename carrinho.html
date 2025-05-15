@@ -1,218 +1,271 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-lugx-gaming.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+  </head>
 
-  <!-- Additional CSS Files -->
-  <link rel="stylesheet" href="assets/css/fontawesome.css">
-  <link rel="stylesheet" href="assets/css/templatemo-lugx-gaming.css">
-  <link rel="stylesheet" href="assets/css/owl.css">
-  <link rel="stylesheet" href="assets/css/animate.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-
-  <!-- Estilo personalizado -->
-  <style>
-    .btn-custom {
-      padding: 10px 20px;
-      font-weight: 600;
-      border-radius: 6px;
-      transition: 0.3s;
-    }
-
-    .btn-custom:hover {
-      opacity: 0.9;
-      transform: scale(1.02);
-    }
-
-    #total strong {
-      font-size: 1.3rem;
-      color: #333;
-    }
-
-    .modal-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      background: rgba(0,0,0,0.6);
-      width: 100%;
-      height: 100%;
-      z-index: 9999;
-      display: none;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .modal-box {
-      background: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      max-width: 400px;
-      text-align: center;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
-    }
-
-    .modal-box h4 {
-      margin-bottom: 10px;
-      color: #28a745;
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div>
-  <!-- ***** Preloader End ***** -->
-
-  <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <nav class="main-nav">
-          
-            <ul class="nav">
-              <li><a href="index.html" class="active">Início</a></li>
-              <li><a href="shop.html">Nossa Loja</a></li>
-              <li><a href="detalhes.html">Sobre nós</a></li>
-              <li><a href="contact.html">Contato</a></li>
-              <li><a href="login.html">Entrar</a></li>
-              <li><a href="carrinho.html"><i class="fa fa-shopping-cart"></i> Carrinho</a></li>
-            </ul>
-            <a class="menu-trigger"><span>Menu</span></a>
-          </nav>
+  <body>
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+      <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
     </div>
-  </header>
+    <!-- ***** Preloader End ***** -->
 
-  <!-- Carrinho de Compras -->
-  <div class="container mt-5">
-    <h2>Seu Carrinho</h2>
-    <ul id="cart-list" class="list-group mb-4">
-      <!-- Itens do carrinho serão carregados aqui -->
-    </ul>
-    <div id="total" class="text-right">
-      <strong>Total: R$<span id="total-price">0,00</span></strong>
-    </div>
-    <div class="text-right mt-4">
-      <button class="btn btn-danger btn-custom" onclick="clearCart()">Limpar Carrinho</button>
-      <button class="btn btn-success btn-custom ml-2" onclick="finishPurchase()">Finalizar Compra</button>
-    </div>
-  </div>
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="main-nav">
+              <!-- Logo -->
+              <a href="index.html" class="logo">
+                <h1>LUGX</h1>
+              </a>
+              <!-- Menu -->
+              <ul class="nav">
+                <li><a href="index.html" class="active">Início</a></li>
+                <li><a href="shop.html">Nossa Loja</a></li>
+                <li><a href="detalhes.html">Sobre nós</a></li>
+                <li><a href="contact.html">Contato</a></li>
+                <li><a href="login.html">Entrar</a></li>
+                <li class="cart-icon">
+                  <a href="carrinho.html">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                  </a>
+                </li>
+              </ul>
+              <a class="menu-trigger"><span>Menu</span></a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
 
-  <!-- Modal de Confirmação -->
-  <div class="modal-bg" id="confirmation-modal">
-    <div class="modal-box">
-      <h4>Compra Finalizada!</h4>
-      <p>Obrigado por comprar na LUGX Gaming. Um e-mail com os detalhes foi enviado.</p>
-      <button class="btn btn-success btn-custom" onclick="closeModal()">Fechar</button>
-    </div>
-  </div>
+    <!-- Carrinho de Compras -->
+    <div class="cart-container">
+      <div class="cart-header">
+        <h2>Seu Carrinho</h2>
+      </div>
 
-  <!-- Footer -->
-  <footer class="mt-5">
-    <div class="container">
-      <div class="col-lg-12">
-        <p>
-          Copyright © 2023 LUGX Gaming Company. Todos os direitos reservados.
-          &nbsp;|&nbsp;
-          Adaptado por <strong>Ana Luiza</strong>
-          &nbsp;|&nbsp;
-          <a rel="nofollow" href="https://templatemo.com" target="_blank">Design Base: TemplateMo</a>
-        </p>
+      <div id="cart-content">
+        <div id="cart-items" class="mb-4">
+          <!-- Itens do carrinho serão carregados aqui -->
+        </div>
+
+        <div class="cart-summary">
+          <h4>Resumo do Pedido</h4>
+          <div class="cart-summary-item">
+            <span>Subtotal:</span>
+            <span>R$<span id="subtotal-price">0,00</span></span>
+          </div>
+          <div class="cart-summary-item">
+            <span>Frete:</span>
+            <span>Grátis</span>
+          </div>
+          <div class="cart-summary-item cart-summary-total">
+            <span>Total:</span>
+            <span>R$<span id="total-price">0,00</span></span>
+          </div>
+
+          <button class="cart-checkout-btn" onclick="finishPurchase()">
+            Finalizar Compra
+          </button>
+        </div>
+      </div>
+
+      <div id="empty-cart" class="empty-cart" style="display: none">
+        <div class="empty-cart-icon">
+          <i class="fas fa-shopping-cart"></i>
+        </div>
+        <p class="empty-cart-message">Seu carrinho está vazio</p>
+        <a href="shop.html" class="main-button">Ir para a Loja</a>
       </div>
     </div>
-  </footer>
 
-  <!-- Scripts -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/counter.js"></script>
-  <script src="assets/js/custom.js"></script>
+    <!-- Modal de Confirmação -->
+    <div class="modal-bg" id="confirmation-modal">
+      <div class="modal-box">
+        <h4>Compra Finalizada!</h4>
+        <p>
+          Obrigado por comprar na LUGX Gaming. Um e-mail com os detalhes foi
+          enviado.
+        </p>
+        <div class="modal-actions">
+          <button class="btn-custom btn-success" onclick="closeModal()">
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
 
-  <!-- Carrinho Script -->
-  <script>
-    function loadCart() {
-      let cart = JSON.parse(localStorage.getItem('cart')) || [];
-      let cartList = document.getElementById('cart-list');
-      let totalPrice = 0;
-      cartList.innerHTML = '';
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="col-lg-12">
+          <p>
+            Copyright © 2023 LUGX Gaming Company. Todos os direitos reservados.
+            &nbsp;|&nbsp; Adaptado por <strong>Ana Luiza</strong>
+            &nbsp;|&nbsp;
+            <a rel="nofollow" href="https://templatemo.com" target="_blank"
+              >Design Base: TemplateMo</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
 
-      if (cart.length === 0) {
-        cartList.innerHTML = '<li class="list-group-item">Seu carrinho está vazio.</li>';
-        document.getElementById('total-price').innerText = '0,00';
-        return;
+    <!-- Scripts -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/counter.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <!-- Carrinho Script -->
+    <script>
+      function updateCartCount() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        document.querySelector(".cart-count").textContent = cart.length;
+        document.querySelector(".cart-count").style.display = cart.length
+          ? "block"
+          : "none";
       }
 
-      cart.forEach((item, index) => {
-        let subtotal = item.price * item.qty;
-        let li = document.createElement('li');
-        li.classList.add('list-group-item');
-        li.innerHTML = `${item.game} (x${item.qty}) - R$${subtotal.toFixed(2)}
-          <button class="btn btn-sm btn-danger float-right" onclick="removeItem(${index})">Remover</button>`;
-        cartList.appendChild(li);
-        totalPrice += subtotal;
-      });
+      function loadCart() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let cartItems = document.getElementById("cart-items");
+        let emptyCart = document.getElementById("empty-cart");
+        let cartContent = document.getElementById("cart-content");
+        let subtotal = 0;
 
-      document.getElementById('total-price').innerText = totalPrice.toFixed(2);
-    }
+        cartItems.innerHTML = "";
 
-    function clearCart() {
-      localStorage.removeItem('cart');
-      loadCart();
-    }
+        if (cart.length === 0) {
+          cartContent.style.display = "none";
+          emptyCart.style.display = "block";
+          document.getElementById("total-price").textContent = "0,00";
+          document.getElementById("subtotal-price").textContent = "0,00";
+          updateCartCount();
+          return;
+        }
 
-    function removeItem(index) {
-      let cart = JSON.parse(localStorage.getItem('cart')) || [];
-      cart.splice(index, 1);
-      localStorage.setItem('cart', JSON.stringify(cart));
-      loadCart();
-    }
+        cartContent.style.display = "block";
+        emptyCart.style.display = "none";
 
-    function finishPurchase() {
-      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.forEach((item, index) => {
+          let itemTotal = item.price * item.qty;
+          subtotal += itemTotal;
 
-      if (cart.length === 0) {
-        alert('Seu carrinho está vazio.');
-        return;
+          let itemElement = document.createElement("div");
+          itemElement.className = "cart-item";
+          itemElement.innerHTML = `
+          <div class="cart-item-img">
+            <img src="${item.image || "assets/images/game-01.jpg"}" alt="${
+            item.game
+          }">
+          </div>
+          <div class="cart-item-details">
+            <h4 class="cart-item-title">${item.game}</h4>
+            <div class="cart-item-price">R$${item.price.toFixed(2)}</div>
+            <div class="cart-item-quantity">
+              <button onclick="updateQuantity(${index}, -1)">-</button>
+              <input type="text" value="${item.qty}" readonly>
+              <button onclick="updateQuantity(${index}, 1)">+</button>
+            </div>
+          </div>
+          <button class="cart-item-remove" onclick="removeItem(${index})">
+            <i class="fas fa-trash"></i>
+          </button>
+        `;
+
+          cartItems.appendChild(itemElement);
+        });
+
+        document.getElementById("subtotal-price").textContent =
+          subtotal.toFixed(2);
+        document.getElementById("total-price").textContent =
+          subtotal.toFixed(2);
+        updateCartCount();
       }
 
-      // Simula integração com pagamento (você pode substituir por API real)
-      setTimeout(() => {
-        document.getElementById('confirmation-modal').style.display = 'flex';
-        clearCart();
-      }, 1000);
-    }
+      function updateQuantity(index, change) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart[index].qty += change;
 
-    function closeModal() {
-      document.getElementById('confirmation-modal').style.display = 'none';
-    }
+        if (cart[index].qty < 1) {
+          cart[index].qty = 1;
+        }
 
-    window.onload = loadCart;
-  </script>
+        localStorage.setItem("cart", JSON.stringify(cart));
+        loadCart();
+      }
 
-</body>
+      function removeItem(index) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        loadCart();
+      }
+
+      function finishPurchase() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        if (cart.length === 0) {
+          alert("Seu carrinho está vazio.");
+          return;
+        }
+
+        document.getElementById("confirmation-modal").style.display = "flex";
+
+        localStorage.removeItem("cart");
+        loadCart();
+      }
+
+      function closeModal() {
+        document.getElementById("confirmation-modal").style.display = "none";
+      }
+
+      window.onload = function () {
+        loadCart();
+      };
+    </script>
+  </body>
 </html>
