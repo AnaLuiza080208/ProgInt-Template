@@ -2071,3 +2071,63 @@ footer a:hover {
 .cart-icon .cart-count.empty {
   display: none;
 }
+
+.profile-header {
+  background: linear-gradient(135deg, #ee626b, #a29bfe 100%);
+  color: white;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+.badge-skill {
+  background-color: #fd79a8;
+  color: white;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  display: inline-block;
+}
+.timeline-item {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 25px;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #6c5ce7;
+}
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 20px;
+  bottom: -25px;
+  width: 1px;
+  background-color: #ddd;
+}
+.last-item::after {
+  display: none;
+}
+
+
+.dual-column {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.left-column, .right-column {
+  width: 48%;
+  margin-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .left-column, .right-column {
+      width: 100%;
+  }
+}
